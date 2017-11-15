@@ -5,14 +5,16 @@ import model.book.BookSummary;
 import model.book.BookTitle;
 import model.search.Criteria;
 import model.search.Keyword;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SearchService {
 
     BookSummary all() {
         return null;
     }
 
-    BookSummary findByKeyword(Keyword keyword) {
+    BookSummary findForKeyword(Keyword keyword) {
         return null;
     }
 
