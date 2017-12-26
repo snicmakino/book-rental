@@ -23,7 +23,6 @@ public class 状態遷移 {
     Map<貸出イベントタイプ, Set<貸出ステータスタイプ>> from = new HashMap<>();
 
     {
-        from.put(予約, EnumSet.of(貸出中,返却期限が近付いた時の通知済み,延滞中));
         from.put(貸出, EnumSet.of(貸出可能));
         from.put(貸出の失敗, EnumSet.of(貸出可能));
         from.put(返却期限が近付いた時の通知, EnumSet.of(貸出中));
@@ -43,6 +42,6 @@ public class 状態遷移 {
 
         if(validStatus.contains(貸出ステータスタイプ)) return;
 
-        throw new IllegalStateException("予約できない状態");
+        throw new IllegalStateException("貸出できない状態");
     }
 }
